@@ -1,7 +1,7 @@
 - [x] react-dom.js - Render a React component for testing
 - [x] jest-dom.js - Use jest-dom for improved assertions
 - [x] dom-testing-library.js - Use dom-testing-library to write more maintainable React tests
-- [ ] react-testing-library.js - Use react-testing-library to render and test React Components
+- [x] react-testing-library.js - Use react-testing-library to render and test React Components
 - [ ] localized.js - Testing localized content with react-testing-library
 - [ ] state.js - Test React Component state changes with react-testing-library
 - [ ] prop-updates.js - Test prop updates with react-testing-library
