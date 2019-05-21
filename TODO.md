@@ -3,7 +3,7 @@
 - [x] dom-testing-library.js - Use dom-testing-library to write more maintainable React tests
 - [x] react-testing-library.js - Use react-testing-library to render and test React Components
 - [ ] localized.js - Testing localized content with react-testing-library
-- [ ] state.js - Test React Component state changes with react-testing-library
+- [x] state.js - Test React Component state changes with react-testing-library
 - [ ] prop-updates.js - Test prop updates with react-testing-library
 - [ ] a11y.js - Test accessibility of rendered React Components with jest-axe
 - [ ] dependency-injection.js - Mock HTTP Requests with Dependency Injection in React Component Tests
