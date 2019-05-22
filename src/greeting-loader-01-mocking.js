@@ -6,7 +6,7 @@ class GreetingLoader extends Component {
   state = {greeting: ''}
   loadGreetingForInput = async e => {
     e.preventDefault()
-    const {data} = await loadGreeting(this.inputRef.current.value)
+    const {data} = await this.props.loadGreeting(this.inputRef.current.value)
     this.setState({greeting: data.greeting})
   }
   render() {
@@ -20,5 +20,7 @@ class GreetingLoader extends Component {
     )
   }
 }
+
+GreetingLoader.defaultProps = {loadGreeting}
 
 export {GreetingLoader}
