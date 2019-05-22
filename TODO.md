@@ -5,7 +5,7 @@
 - [ ] localized.js - Testing localized content with react-testing-library
 - [x] state.js - Test React Component state changes with react-testing-library
 - [x] prop-updates.js - Test prop updates with react-testing-library
-- [ ] a11y.js - Test accessibility of rendered React Components with jest-axe
+- [x] a11y.js - Test accessibility of rendered React Components with jest-axe
 - [ ] dependency-injection.js - Mock HTTP Requests with Dependency Injection in React Component Tests
 - [ ] http-jest-mock.js - Mock HTTP Requests with jest.mock in React Component Tests
 - [ ] mock-component.js - Mock react-transition-group in React Component Tests with jest.mock
