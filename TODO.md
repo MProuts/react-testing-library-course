@@ -8,7 +8,7 @@
 - [x] a11y.js - Test accessibility of rendered React Components with jest-axe
 - [x] dependency-injection.js - Mock HTTP Requests with Dependency Injection in React Component Tests
 - [x] http-jest-mock.js - Mock HTTP Requests with jest.mock in React Component Tests
-- [ ] mock-component.js - Mock react-transition-group in React Component Tests with jest.mock
+- [x] mock-component.js - Mock react-transition-group in React Component Tests with jest.mock
 - [ ] error-boundaries.js - Test componentDidCatch handler error boundaries with react-testing-library
 - [ ] tdd-markup.js - Test drive the development of a React Form with react-testing-library
 - [ ] tdd-functionality.js - TDD the functionality of a React Form with react-testing-library
