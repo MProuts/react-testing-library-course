@@ -8,11 +8,9 @@ import {render} from 'react-testing-library'
 import {Editor} from '../post-editor'
 
 test('renders a form with title, content, tags, and a submit button', () => {
-  const {getByLabelText} = render(<Editor />)
-  const input = getByLabelText(/title/i)
-  console.log(input)
+  const {getByText, getByLabelText} = render(<Editor />)
   expect(getByLabelText(/title/i)).toBeInTheDocument()
   expect(getByLabelText(/content/i)).toBeInTheDocument()
   expect(getByLabelText(/tags/i)).toBeInTheDocument()
-  expect(getByLabelText(/submit/i)).toBeInTheDocument()
+  expect(getByText(/submit/i)).toBeInTheDocument()
 })

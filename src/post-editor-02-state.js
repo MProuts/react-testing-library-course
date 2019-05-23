@@ -18,9 +18,7 @@ class Editor extends React.Component {
         <label htmlFor="tags-input">Tags</label>
         <input id="tags-input" />
 
-        <button type="submit" disabled={this.state.isSaving}>
-          Submit
-        </button>
+        <button disabled={this.state.isSaving}>Submit</button>
       </form>
     )
   }

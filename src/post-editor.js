@@ -1,19 +1,39 @@
 import React from 'react'
 
-export function Editor(_props) {
-  return (
-    <form>
-      <label htmlFor="title">Title</label>
-      <input id="title" name="title" type="text" />
+export class Editor extends React.Component {
+  constructor(props) {
+    super(props)
 
-      <label htmlFor="content">Content</label>
-      <input id="content" name="content" type="text" />
+    this.state = {submitDisabled: false}
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
 
-      <label htmlFor="tags">Tags</label>
-      <input id="tags" name="tags" type="text" />
+  handleSubmit(e) {
+    e.preventDefault()
+    this.setState({submitDisabled: true})
+  }
 
-      <label htmlFor="submit">Submit</label>
-      <input id="submit" type="submit" value="Submit" />
-    </form>
-  )
+  render() {
+    return (
+      <form>
+        <label htmlFor="title">Title</label>
+        <input id="title" name="title" type="text" />
+
+        <label htmlFor="content">Content</label>
+        <input id="content" name="content" type="text" />
+
+        <label htmlFor="tags">Tags</label>
+        <input id="tags" name="tags" type="text" />
+
+        <button
+          type="submit"
+          value="Submit"
+          onClick={this.handleSubmit}
+          disabled={this.state.submitDisabled}
+        >
+          Submit
+        </button>
+      </form>
+    )
+  }
 }
