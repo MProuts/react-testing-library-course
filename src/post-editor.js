@@ -1,21 +1,35 @@
 import React from 'react'
+import {savePost} from './api'
 
 export class Editor extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = {submitDisabled: false}
+    this.state = {
+      submitDisabled: false,
+    }
+
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleSubmit(e) {
     e.preventDefault()
+    const target = e.target
+    const {title, content, tags} = target.elements
+
     this.setState({submitDisabled: true})
+
+    savePost({
+      title: title.value,
+      content: content.value,
+      tags: tags.value.split(','),
+      authorId: this.props.user.id,
+    })
   }
 
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <label htmlFor="title">Title</label>
         <input id="title" name="title" type="text" />
 
@@ -25,15 +39,12 @@ export class Editor extends React.Component {
         <label htmlFor="tags">Tags</label>
         <input id="tags" name="tags" type="text" />
 
-        <button
-          type="submit"
-          value="Submit"
-          onClick={this.handleSubmit}
-          disabled={this.state.submitDisabled}
-        >
-          Submit
-        </button>
+        <button disabled={this.state.submitDisabled}>Submit</button>
       </form>
     )
   }
+}
+
+Editor.defaultProps = {
+  user: {id: 0},
 }
